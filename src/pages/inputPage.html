@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCSE Subject Selection</title>
+    <style>
+        /* Modern Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #1f2937;
+            background-color: #f9fafb;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 400;
+            color: #4b5563;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+        }
+
+        .optional-group {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .optional-group h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .error {
+            color: #dc2626;
+            font-size: 14px;
+            margin-top: 8px;
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+
+        button:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>KCSE Subject Selection Form</h1>
+        <form id="subjectForm">
+            <!-- Core Subjects -->
+            <div class="form-group">
+                <label for="english">English</label>
+                <select id="english" name="english" required>
+                    <option value="">--Select Grade--</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="kiswahili">Kiswahili</label>
+                <select id="kiswahili" name="kiswahili" required>
+                    <option value="">--Select Grade--</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mathematics">Mathematics</label>
+                <select id="mathematics" name="mathematics" required>
+                    <option value="">--Select Grade--</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="biology">Biology</label>
+                <select id="biology" name="biology" required>
+                    <option value="">--Select Grade--</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="chemistry">Chemistry</label>
+                <select id="chemistry" name="chemistry" required>
+                    <option value="">--Select Grade--</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="physics">Physics</label>
+                <select id="physics" name="physics" required>
+                    <option value="">--Select Grade--</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="history_geography">History and Government / Geography</label>
+                <select id="history_geography" name="history_geography" required>
+                    <option value="">--Select Grade--</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+
+            <!-- Optional Science -->
+            <div class="optional-group">
+                <h2>Optional Science (Select One)</h2>
+                <div class="form-group">
+                    <label for="optional_science">Choose Subject:</label>
+                    <select id="optional_science" name="optional_science" required>
+                        <option value="">--Select Subject--</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="computer_studies">Computer Studies</option>
+                        <option value="home_science">Home Science</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="optional_science_grade">Grade:</label>
+                    <select id="optional_science_grade" name="optional_science_grade" required>
+                        <option value="">--Select Grade--</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="B-">B-</option>
+                        <option value="C+">C+</option>
+                        <option value="C">C</option>
+                        <option value="C-">C-</option>
+                        <option value="D+">D+</option>
+                        <option value="D">D</option>
+                        <option value="D-">D-</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Optional Humanity -->
+            <div class="optional-group">
+                <h2>Optional Humanity (Select One)</h2>
+                <div class="form-group">
+                    <label for="optional_humanity">Choose Subject:</label>
+                    <select id="optional_humanity" name="optional_humanity" required>
+                        <option value="">--Select Subject--</option>
+                        <option value="cre">Christian Religious Education (CRE)</option>
+                        <option value="ire">Islamic Religious Education (IRE)</option>
+                        <option value="hre">Hindu Religious Education (HRE)</option>
+                        <option value="business_studies">Business Studies</option>
+                        <option value="music">Music</option>
+                        <option value="art_and_design">Art and Design</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="optional_humanity_grade">Grade:</label>
+                    <select id="optional_humanity_grade" name="optional_humanity_grade" required>
+                        <option value="">--Select Grade--</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="B-">B-</option>
+                        <option value="C+">C+</option>
+                        <option value="C">C</option>
+                        <option value="C-">C-</option>
+                        <option value="D+">D+</option>
+                        <option value="D">D</option>
+                        <option value="D-">D-</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Optional Technical -->
+            <div class="optional-group">
+                <h2>Optional Technical (Select One)</h2>
+                <div class="form-group">
+                    <label for="optional_technical">Choose Subject:</label>
+                    <select id="optional_technical" name="optional_technical" required>
+                        <option value="">--Select Subject--</option>
+                        <option value="building_construction">Building and Construction</option>
+                        <option value="power_mechanics">Power Mechanics</option>
+                        <option value="electricity">Electricity</option>
+                        <option value="drawing_design">Drawing and Design</option>
+                        <option value="aviation_technology">Aviation Technology</option>
+                        <option value="metalwork">Metalwork</option>
+                        <option value="woodwork">Woodwork</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="optional_technical_grade">Grade:</label>
+                    <select id="optional_technical_grade" name="optional_technical_grade" required>
+                        <option value="">--Select Grade--</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="B-">B-</option>
+                        <option value="C+">C+</option>
+                        <option value="C">C</option>
+                        <option value="C-">C-</option>
+                        <option value="D+">D+</option>
+                        <option value="D">D</option>
+                        <option value="D-">D-</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Form validation for sciences
+        document.getElementById('subjectForm').addEventListener('submit', function (event) {
+            const scienceCheckboxes = document.querySelectorAll('input[name="sciences"]:checked');
+            if (scienceCheckboxes.length < 2) {
+                event.preventDefault(); // Prevent form submission
+                document.getElementById('scienceError').style.display = 'block'; // Show error message
+            } else {
+                document.getElementById('scienceError').style.display = 'none'; // Hide error message
+            }
+        });
+    </script>
+</body>
+</html>
